@@ -16,13 +16,15 @@ int main()
 {
     int A,B;
     while(cin>>A>>B){
-        int largest=0;
-        int original_1=A,original_2=B;
+
+        int original_A=A,original_B=B;
         if(A>B)swap(A,B);
+
+        int largest=0;
         for(;A<=B;A++)
             if(collatz(A)>largest)largest=collatz(A);
 
-        cout<<original_1<<" "<<original_2<<" "<<largest<<"\n";
+        cout<<original_A<<" "<<original_B<<" "<<largest<<"\n";
     }
 
     return 0;
